@@ -1,0 +1,595 @@
+/* Import Fine-Art Wedding Script & Editorial Serif Fonts */
+@import url('https://googleapis.com');
+
+/* Hybrid Wedding Palette: Dusty Rose + Pearl Ivory + Botanical Sage + Antique Gold */
+:root {
+  --warm-ivory: #FAF7F2;
+  --pearl-white: #FFFFFF;
+  --dusty-rose: #D8A1A6;
+  --rose-blush: #F6E6E8;
+  --botanical-sage: #4A6154;
+  --sage-deep: #2C3E35;
+  --sage-mist: #EBF0ED;
+  --antique-gold: #C5A059;
+  --gold-dark: #9E7B38;
+  --text-charcoal: #2C3531;
+  --text-muted: #68736D;
+  --border-linen: #E6DFD5;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--warm-ivory);
+  color: var(--text-charcoal);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+/* Sticky Pearl & Antique Gold Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  border-bottom: 1px solid var(--border-linen);
+}
+
+.monogram {
+  font-size: 1.7rem;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: var(--sage-deep);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  color: var(--sage-deep);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--dusty-rose);
+}
+
+.rsvp-nav-btn {
+  padding: 0.55rem 1.4rem;
+  background-color: var(--botanical-sage);
+  color: var(--pearl-white) !important;
+  border-radius: 999px;
+  border: 1px solid var(--antique-gold);
+  transition: all 0.3s ease !important;
+}
+
+.rsvp-nav-btn:hover {
+  background-color: var(--dusty-rose) !important;
+  color: var(--sage-deep) !important;
+  border-color: var(--dusty-rose) !important;
+}
+
+/* Romantic Conservatory Hero Banner */
+.hero {
+  background:
+    radial-gradient(circle at 20% 25%, rgba(216, 161, 166, 0.28), transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(74, 97, 84, 0.16), transparent 50%),
+    linear-gradient(180deg, #FAF7F2 0%, #F6E6E8 100%);
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4.5rem 2rem;
+  border-bottom: 1px solid var(--border-linen);
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.invite-tag {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--botanical-sage);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 4.8rem;
+  font-style: italic;
+  line-height: 1.08;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+}
+
+.invite-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+}
+
+.date-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.8rem;
+  background-color: var(--pearl-white);
+  border: 1px solid var(--antique-gold);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--sage-deep);
+  margin-bottom: 2.2rem;
+  box-shadow: 0 8px 24px rgba(44, 62, 53, 0.05);
+}
+
+.sep {
+  color: var(--dusty-rose);
+}
+
+/* Live Countdown Strip */
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.time-unit {
+  background-color: var(--pearl-white);
+  border: 1px solid var(--border-linen);
+  border-top: 3px solid var(--dusty-rose);
+  border-radius: 14px;
+  min-width: 86px;
+  padding: 1rem 0.8rem;
+  box-shadow: 0 8px 20px rgba(44, 62, 53, 0.04);
+}
+
+.time-unit strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--sage-deep);
+}
+
+.time-unit span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.95rem 2.5rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primary-btn {
+  background-color: var(--botanical-sage);
+  color: var(--pearl-white);
+  border: 1px solid var(--botanical-sage);
+  box-shadow: 0 10px 25px rgba(74, 97, 84, 0.22);
+}
+
+.primary-btn:hover {
+  background-color: var(--dusty-rose);
+  border-color: var(--dusty-rose);
+  color: var(--sage-deep);
+  transform: translateY(-3px);
+}
+
+/* Shared Section Headers */
+section {
+  padding: 6rem 6%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.8rem;
+}
+
+.sub-tag {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: var(--gold-dark);
+  margin-bottom: 0.4rem;
+}
+
+.section-header h2 {
+  font-size: 2.9rem;
+  color: var(--sage-deep);
+}
+
+/* Celebration Details Cards */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background-color: var(--pearl-white);
+  border: 1px solid var(--border-linen);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(44, 62, 53, 0.04);
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--antique-gold);
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.3rem 0.95rem;
+  border-radius: 999px;
+  background-color: var(--rose-blush);
+  color: var(--sage-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.detail-card h3 {
+  font-size: 1.7rem;
+  color: var(--sage-deep);
+  margin-bottom: 0.6rem;
+}
+
+.event-time {
+  font-weight: 600;
+  color: var(--gold-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-venue {
+  font-weight: 600;
+  color: var(--botanical-sage);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.event-address {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* Wedding Day Timeline */
+.timeline-section {
+  background-color: var(--sage-mist);
+  max-width: 100%;
+  border-top: 1px solid var(--border-linen);
+  border-bottom: 1px solid var(--border-linen);
+}
+
+.timeline-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.timeline-item {
+  background-color: var(--pearl-white);
+  border: 1px solid var(--border-linen);
+  border-left: 4px solid var(--dusty-rose);
+  border-radius: 14px;
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  box-shadow: 0 6px 18px rgba(44, 62, 53, 0.03);
+  transition: transform 0.3s ease, border-left-color 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(6px);
+  border-left-color: var(--botanical-sage);
+}
+
+.time-pill {
+  min-width: 105px;
+  text-align: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--rose-blush);
+  color: var(--sage-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: var(--sage-deep);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Engagement Photo Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.6rem;
+}
+
+.photo-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 4px solid var(--pearl-white);
+  box-shadow: 0 12px 28px rgba(44, 62, 53, 0.08);
+  height: 310px;
+  background-color: var(--rose-blush);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.06);
+}
+
+/* RSVP Card Section */
+.rsvp-section {
+  padding-top: 2rem;
+}
+
+.rsvp-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(216, 161, 166, 0.22), transparent 45%),
+    var(--pearl-white);
+  border: 1px solid var(--antique-gold);
+  border-radius: 24px;
+  padding: 3.5rem 2.8rem;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(44, 62, 53, 0.08);
+}
+
+.rsvp-card h2 {
+  font-size: 3rem;
+  color: var(--sage-deep);
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-card p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-linen);
+  background-color: var(--warm-ivory);
+  color: var(--text-charcoal);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+  border-color: var(--botanical-sage);
+  background-color: var(--pearl-white);
+}
+
+.rsvp-form .primary-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.wed-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(44, 62, 53, 0.75);
+      backdrop-filter: blur(5px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 998;
+    }
+    .wed-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .rsvp-pass-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -45%) scale(0.95);
+      width: 92%;
+      max-width: 460px;
+      background: #FAF7F2;
+      color: #2C3531;
+      border: 2px solid #C5A059;
+      border-radius: 22px;
+      overflow: hidden;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.35s ease;
+      z-index: 999;
+      box-shadow: 0 25px 60px rgba(44, 62, 53, 0.35);
+    }
+    .rsvp-pass-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .pass-top {
+      background: #2C3E35;
+      color: #FFFFFF;
+      padding: 1.8rem 1.5rem;
+      border-bottom: 2px dashed #C5A059;
+    }
+    .pass-top span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      color: #F6E6E8;
+      margin-bottom: 0.35rem;
+    }
+    .pass-top h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-style: italic;
+      color: #C5A059;
+      margin: 0;
+    }
+    .pass-body {
+      padding: 1.8rem 2rem 2.2rem;
+    }
+    .pass-details {
+      background: #FFFFFF;
+      border: 1px solid #E6DFD5;
+      border-left: 4px solid #D8A1A6;
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      margin: 1.2rem 0 1.6rem;
+      text-align: left;
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+    .pass-details strong {
+      color: #4A6154;
+    }
+    .pass-code {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: #F6E6E8;
+      color: #2C3E35;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 1.4rem;
+    }
+
+/* Footer */
+.footer {
+  background-color: var(--sage-deep);
+  color: var(--rose-blush);
+  text-align: center;
+  padding: 2.2rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  border-top: 2px solid var(--antique-gold);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3.3rem;
+  }
+
+  .date-banner {
+    flex-direction: column;
+    gap: 0.3rem;
+    border-radius: 18px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+.form-row {
+grid-template-columns: 1fr;
+}
+.rsvp-card {
+padding: 2.5rem 1.5rem;
+}
+}
